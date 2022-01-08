@@ -22,7 +22,7 @@
       <!-- ① スマホのカメラを起動する部分 -->
       <div class="p-3" v-if="isStatusReady">
         <label class="btn">
-            <form action="/upload_image" enctype="multipart/form-data" method="get">
+            <form action="/upload_image" enctype="multipart/form-data" method="post">
                 @csrf
                 <div id="result"></div>
                 <img id="preview" style="height: 10%; width: 20%;">
