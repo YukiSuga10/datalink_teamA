@@ -29,15 +29,11 @@ class MotionController extends Controller
         return $distance;
     }
 
-    public function judgeMotion($data){   
-        $date = date("Y-m-d",$data["timestamp"]);  
-        $time = date("H:i:s", $data["timestamp"]);
-        
-        
-        
-
-
+    public function wait()
+    {
+        return view('motionwaiting');
     }
+
 
     public static function motion(Request $request){
   
@@ -77,7 +73,7 @@ class MotionController extends Controller
                 $image_address = Picmot::query()->where("motion",$opponent1['motion'])->where("motioned_at",$opponent1['motioned_at'])->where("lat",$opponent1["lat"])->where("lon",$opponent1["lon"])->first();
                 return view("motionOK")->with(["image" => $image_address]);
             }else{
-                $image_address = Picmot::query()->where("motion",$opponent2['motion'])->where("motioned_at",$opponent2['motioned_at'])->where("lat",$opponent2["lat"])->where("lon",$opponent["lon"])->first();
+                $image_address = Picmot::query()->where("motion",$opponent2['motion'])->where("motioned_at",$opponent2['motioned_at'])->where("lat",$opponent2["lat"])->where("lon",$opponent2["lon"])->first();
                 return view("motionOK")->with(["image" => $image_address]);
             }
             

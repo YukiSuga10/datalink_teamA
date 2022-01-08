@@ -1,0 +1,39 @@
+html,body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center; 
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f5f5f5;
+}
+
+span1{
+  color: #38b6a5;
+}
+
+span2{
+  color: white;
+}
+
+.form-Login {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-Login .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-Login input[type="text"] {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

@@ -22,6 +22,7 @@ function getFakeDate(){
         //ここでデータの送信先URLを指定します。
         url: "/get_motion",
         dataType: "json",
+        processData: false,
         data: json,
       })
         //通信が成功したとき
